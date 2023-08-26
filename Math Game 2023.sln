@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math Game 2023", "Math Game 2023\Math Game 2023.csproj", "{01E4A6DB-4CD6-427D-9FC3-A93AA706D62A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01E4A6DB-4CD6-427D-9FC3-A93AA706D62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E4A6DB-4CD6-427D-9FC3-A93AA706D62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E4A6DB-4CD6-427D-9FC3-A93AA706D62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E4A6DB-4CD6-427D-9FC3-A93AA706D62A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CCF46EB-0ED7-43AA-A90D-3E51575D8AC7}
+	EndGlobalSection
+EndGlobal
