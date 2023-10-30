@@ -15,23 +15,21 @@ Console.WriteLine("------------------------------------");
 
 var selectedGame = Console.ReadLine(); // stores the user input for the selected game
 
-if (selectedGame == "a")
+if (selectedGame.Trim() == "a") // Trim removes white spaces 
 {
     Console.WriteLine("Addition game selected");
-} else if (selectedGame.ToUpper() == "s")
+} else if (selectedGame.Trim() == "s")
 {
     Console.WriteLine("Subtraction game selected");
-} else if (selectedGame == "m")
+} else if (selectedGame.Trim() == "m")
 {
     Console.WriteLine("Multiplication game selected");
-} else if (selectedGame == "d")
+} else if (selectedGame.Trim() == "d")
 {
     Console.WriteLine("Division game selected");
-} else if (selectedGame == "q")
-{
-    Console.WriteLine("Exiting game");
 } else
 {
-    Console.WriteLine("Invalid input");
+    Console.WriteLine("Goodbye");
+    Environment.Exit(1);
 }
 
