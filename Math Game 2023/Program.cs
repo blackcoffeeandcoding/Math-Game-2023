@@ -15,21 +15,46 @@ Console.WriteLine("------------------------------------");
 
 var selectedGame = Console.ReadLine(); // stores the user input for the selected game
 
-if (selectedGame.Trim() == "a") // Trim removes white spaces 
+if (selectedGame.Trim().ToLower() == "a") // Trim removes white spaces AND forces input to lower case letter
 {
-    Console.WriteLine("Addition game selected");
-} else if (selectedGame.Trim() == "s")
+    AdditionGame("Addition game selected");
+} else if (selectedGame.Trim().ToLower() == "s")
 {
-    Console.WriteLine("Subtraction game selected");
-} else if (selectedGame.Trim() == "m")
+    SubtractionGame("Subtraction game selected");
+} else if (selectedGame.Trim().ToLower() == "m")
 {
-    Console.WriteLine("Multiplication game selected");
-} else if (selectedGame.Trim() == "d")
+    MultiplicationGame("Multiplication game selected");
+} else if (selectedGame.Trim().ToLower() == "d")
 {
-    Console.WriteLine("Division game selected");
-} else
+    DivisionGame("Division game selected");
+} else if (selectedGame.Trim().ToLower() == "q")
+{
+    Console.WriteLine("Quitting game...");
+} else 
 {
     Console.WriteLine("Goodbye");
     Environment.Exit(1);
 }
+
+
+void DivisionGame(string message)
+{
+    Console.WriteLine(message);
+}
+
+void MultiplicationGame(string message)
+{
+    Console.WriteLine(message);
+}
+
+void SubtractionGame(string message)
+{
+    Console.WriteLine(message);
+}
+
+void AdditionGame(string message) // void doesn't return anything
+{
+    Console.WriteLine(message);
+}
+
 
