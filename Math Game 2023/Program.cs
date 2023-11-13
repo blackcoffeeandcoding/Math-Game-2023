@@ -152,7 +152,8 @@ void AdditionGame(string message) // void doesn't return anything
 
       if(i == 4)
         {
-            Console.WriteLine($"Game over! Your final score is {score}");
+            Console.WriteLine($"Game over! Your final score is {score}. Press any key to go back to the main menu.");
+            Console.ReadLine();
         }
     }
 
@@ -184,37 +185,55 @@ void Menu(string? name)
     Console.WriteLine("------------------------------------");
     Console.WriteLine($"Hello {name}. It's {date}. This is a math game to test your skills.");
     Console.WriteLine("\n");
-    Console.WriteLine(@$"Please choose the game you'd like to play from the options below
-A - Addition Game
-S - Subtraction Game
-M - Multiplication Game
-D - Division Game
-Q - Quit the program");
-    Console.WriteLine("------------------------------------");
-
-    var selectedGame = Console.ReadLine(); // stores the user input for the selected game
 
 
-    switch (selectedGame.Trim().ToLower())
+    var isGameOn = true;
+
+    do
     {
-        case "a":
-            AdditionGame("Addition game");
-            break;
-        case "s":
-            SubtractionGame("Subtraction game");
-            break;
-        case "m":
-            MultiplicationGame("Multiplication game");
-            break;
-        case "d":
-            DivisionGame("Division game");
-            break;
-        default:   // same as the final else statement
-            Console.WriteLine("Invalid input");
-            Environment.Exit(1);
-            break;
+        Console.Clear();
+        Console.WriteLine("   _____  _  _     __  __       _   _        _____                      \r\n  / ____|| || |_  |  \\/  |     | | | |      / ____|                     \r\n | |   |_  __  _| | \\  / | __ _| |_| |__   | |  __  __ _ _ __ ___   ___ \r\n | |    _| || |_  | |\\/| |/ _` | __| '_ \\  | | |_ |/ _` | '_ ` _ \\ / _ \\\r\n | |___|_  __  _| | |  | | (_| | |_| | | | | |__| | (_| | | | | | |  __/\r\n  \\_____||_||_|   |_|  |_|\\__,_|\\__|_| |_|  \\_____|\\__,_|_| |_| |_|\\___|");
+        Console.WriteLine("-------------------------------------------------------------------------");
+        Console.WriteLine(@$"Please choose the game you'd like to play from the options below
 
-    }
+            |   A - Addition Game        |
+            |   S - Subtraction Game     |  
+            |   M - Multiplication Game  |  
+            |   D - Division Game        |  
+            |   Q - Quit the program     |");    
+        
+
+        var selectedGame = Console.ReadLine(); // stores the user input for the selected game
+
+
+        switch (selectedGame.Trim().ToLower())
+        {
+            case "a":
+                AdditionGame("Addition game");
+                break;
+            case "s":
+                SubtractionGame("Subtraction game");
+                break;
+            case "m":
+                MultiplicationGame("Multiplication game");
+                break;
+            case "d":
+                DivisionGame("Division game");
+                break;
+
+            case "q":
+                Console.WriteLine("Thanks. Bye!");
+                isGameOn = false;
+                Environment.Exit(1);
+                break;
+            default:   // same as the final else statement
+                Console.WriteLine("Invalid input");
+                Environment.Exit(1);
+                break;
+
+        } 
+    } while (isGameOn);
+
 }
 
 string GetName()
