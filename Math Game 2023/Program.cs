@@ -1,6 +1,10 @@
 ﻿using static System.Formats.Asn1.AsnWriter;
 
-string? name = GetName();
+
+var games = new List<string>();
+
+
+string name = GetName();
 var date = DateTime.UtcNow; // gets the current time
 
 Menu(name);
@@ -37,6 +41,8 @@ void DivisionGame(string message)
             Console.WriteLine($"Game over! Your final score is {score}");
         }
     }
+
+    AddToHistory(score, "Division");
 }
 
 void MultiplicationGame(string message)
@@ -76,6 +82,8 @@ void MultiplicationGame(string message)
             Console.WriteLine($"Game over! Your final score is {score}");
         }
     }
+
+    AddToHistory(score, "Multiplication");
 }
 
 void SubtractionGame(string message)
@@ -116,6 +124,8 @@ void SubtractionGame(string message)
             Console.WriteLine($"Game over! Your final score is {score}");
         }
     }
+
+    AddToHistory(score, "Subtraction");
 }
 
 void AdditionGame(string message) // void doesn't return anything
@@ -157,6 +167,13 @@ void AdditionGame(string message) // void doesn't return anything
         }
     }
 
+    AddToHistory(score, "Addition");
+
+}
+
+void AddToHistory(int score, string gameType)
+{
+    games.Add($"{DateTime.Now} - {gameType}: Score = {score} points");
 }
 
 int[] GetDivisionNumbers() // [] square brackets == array
@@ -196,6 +213,7 @@ void Menu(string? name)
         Console.WriteLine("-------------------------------------------------------------------------");
         Console.WriteLine(@$"Please choose the game you'd like to play from the options below
 
+            |   V - View Previous Games  |
             |   A - Addition Game        |
             |   S - Subtraction Game     |  
             |   M - Multiplication Game  |  
@@ -208,6 +226,9 @@ void Menu(string? name)
 
         switch (selectedGame.Trim().ToLower())
         {
+            case "v":
+                GetGames();
+                break;
             case "a":
                 AdditionGame("Addition game");
                 break;
@@ -228,12 +249,24 @@ void Menu(string? name)
                 break;
             default:   // same as the final else statement
                 Console.WriteLine("Invalid input");
-                Environment.Exit(1);
                 break;
 
         } 
     } while (isGameOn);
 
+}
+
+void GetGames()
+{
+    Console.Clear();
+    Console.WriteLine("\r\n   _____                        _    _ _     _                   \r\n  / ____|                      | |  | (_)   | |                  \r\n | |  __  __ _ _ __ ___   ___  | |__| |_ ___| |_ ___  _ __ _   _ \r\n | | |_ |/ _` | '_ ` _ \\ / _ \\ |  __  | / __| __/ _ \\| '__| | | |\r\n | |__| | (_| | | | | | |  __/ | |  | | \\__ \\ || (_) | |  | |_| |\r\n  \\_____|\\__,_|_| |_| |_|\\___| |_|  |_|_|___/\\__\\___/|_|   \\__, |\r\n                                                            __/ |\r\n                                                           |___/ \r\n");
+    Console.WriteLine("------------------------------------------------------------------------");
+    foreach (var game in games)
+    {
+        Console.WriteLine(game);
+    }
+    Console.WriteLine("Press any key to return to the main menu");
+    Console.ReadLine();
 }
 
 string GetName()
