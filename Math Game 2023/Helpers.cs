@@ -7,7 +7,7 @@ namespace Math_Game_2023
     {
        internal static List<Game> games = new List<Game>();
 
-        internal static void AddToHistory(int score, string gameType)
+        internal static void AddToHistory(int gameScore, string gameType)
         {
             games.Add(new Game
             {
