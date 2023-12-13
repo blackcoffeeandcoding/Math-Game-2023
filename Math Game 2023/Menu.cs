@@ -34,7 +34,7 @@ namespace Math_Game_2023
                 switch (selectedGame.Trim().ToLower())
                 {
                     case "v":
-                        Helpers.GetGames();
+                        Helpers.PrintGames();
                         break;
                     case "a":
                         gameEngine.AdditionGame("Addition game");
