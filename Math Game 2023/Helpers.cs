@@ -45,7 +45,7 @@ namespace Math_Game_2023
             Console.WriteLine("------------------------------------------------------------------------");
             foreach (var game in games)
             {
-                Console.WriteLine($"{game.Date} - {game.Type}: {game.Score}pts");
+                Console.WriteLine($"{game.Date} - {game.Type}: Your final score was {game.Score} points");
             }
             Console.WriteLine("Press any key to return to the main menu");
             Console.ReadLine();
