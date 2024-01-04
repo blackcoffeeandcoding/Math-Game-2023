@@ -1,4 +1,6 @@
 ﻿
+using Math_Game_2023.Models;
+
 namespace Math_Game_2023
 {
     internal class GameEngine
@@ -36,7 +38,7 @@ namespace Math_Game_2023
                 }
             }
 
-            Helpers.AddToHistory(score, "Division");
+            Helpers.AddToHistory(score, GameType.Division);
         }
 
        internal void MultiplicationGame(string message)
@@ -77,7 +79,7 @@ namespace Math_Game_2023
                 }
             }
 
-            Helpers.AddToHistory(score, "Multiplication");
+            Helpers.AddToHistory(score, GameType.Multiplication);
         }
 
        internal void SubtractionGame(string message)
@@ -119,7 +121,7 @@ namespace Math_Game_2023
                 }
             }
 
-            Helpers.AddToHistory(score, "Subtraction");
+            Helpers.AddToHistory(score, GameType.Subtraction);
         }
 
         internal void AdditionGame(string message) // void doesn't return anything
@@ -162,7 +164,7 @@ namespace Math_Game_2023
                 }
             }
 
-            Helpers.AddToHistory(score, "Addition");
+            Helpers.AddToHistory(score, GameType.Addition);
 
         }
     }
