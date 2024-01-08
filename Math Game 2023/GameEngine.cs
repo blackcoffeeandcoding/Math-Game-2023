@@ -9,7 +9,7 @@ namespace Math_Game_2023
         {
             var score = 0;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.Clear();
                 Console.WriteLine(message);
@@ -34,7 +34,7 @@ namespace Math_Game_2023
                     Console.ReadLine();
                 }
 
-                if (i == 4)
+                if (i == 11)
                 {
                     Console.WriteLine($"Game over! Your final score is {score}");
                 }
@@ -57,8 +57,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 99);
-                secondNumber = random.Next(1, 99);
+                firstNumber = random.Next(1, 9);
+                secondNumber = random.Next(1, 9);
 
                 Console.WriteLine($"{firstNumber} * {secondNumber}");
                 var result = Console.ReadLine();
@@ -77,7 +77,7 @@ namespace Math_Game_2023
                     Console.ReadLine();
                 }
 
-                if (i == 4)
+                if (i == 11)
                 {
                     Console.WriteLine($"Game over! Your final score is {score}");
                 }
@@ -100,8 +100,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 99);
-                secondNumber = random.Next(1, 99);
+                firstNumber = random.Next(1, 9);
+                secondNumber = random.Next(1, 9);
 
                 Console.WriteLine($"{firstNumber} - {secondNumber}");
                 var result = Console.ReadLine();
@@ -121,7 +121,7 @@ namespace Math_Game_2023
                     Console.ReadLine();
                 }
 
-                if (i == 4)
+                if (i == 11)
                 {
                     Console.WriteLine($"Game over! Your final score is {score}");
                 }
@@ -142,8 +142,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 99);
-                secondNumber = random.Next(1, 99);
+                firstNumber = random.Next(1, 9);
+                secondNumber = random.Next(1, 9);
 
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
                 var result = Console.ReadLine(); // asks for user input
@@ -163,7 +163,7 @@ namespace Math_Game_2023
                     Console.ReadLine();
                 }
 
-                if (i == 4)
+                if (i == 11)
                 {
                     Console.WriteLine($"Game over! Your final score is {score}. Press any key to go back to the main menu.");
                     Console.ReadLine();
