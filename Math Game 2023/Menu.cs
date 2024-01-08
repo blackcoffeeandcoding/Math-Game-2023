@@ -8,7 +8,7 @@ namespace Math_Game_2023
         {
             Console.Clear();
             Console.WriteLine("------------------------------------");
-            Console.WriteLine($"Hello {name}. It's {date}. Welcome to the hardest Math Game in the world.");
+            Console.WriteLine($"Hello {name}. It's {date}. Please press any key to continue.");
             Console.WriteLine("\n");
             Console.ReadLine();
             

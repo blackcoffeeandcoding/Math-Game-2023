@@ -57,8 +57,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 9);
-                secondNumber = random.Next(1, 9);
+                firstNumber = random.Next(1, 99);
+                secondNumber = random.Next(1, 99);
 
                 Console.WriteLine($"{firstNumber} * {secondNumber}");
                 var result = Console.ReadLine();
@@ -100,8 +100,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 9);
-                secondNumber = random.Next(1, 9);
+                firstNumber = random.Next(1, 99);
+                secondNumber = random.Next(1, 99);
 
                 Console.WriteLine($"{firstNumber} - {secondNumber}");
                 var result = Console.ReadLine();
@@ -142,8 +142,8 @@ namespace Math_Game_2023
 
             for (int i = 0; i < 10; i++)
             {
-                firstNumber = random.Next(1, 9);
-                secondNumber = random.Next(1, 9);
+                firstNumber = random.Next(1, 99);
+                secondNumber = random.Next(1, 99);
 
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
                 var result = Console.ReadLine(); // asks for user input
