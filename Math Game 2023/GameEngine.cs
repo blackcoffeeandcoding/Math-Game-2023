@@ -20,6 +20,8 @@ namespace Math_Game_2023
                 Console.WriteLine($"{firstNumber} / {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 if (int.Parse(result) == firstNumber / secondNumber) // since console.readline returns a String we must parse it to an Integer
                 {
                     Console.WriteLine("Your answer was correct! Type any key to move on to the next question");
@@ -59,7 +61,9 @@ namespace Math_Game_2023
                 secondNumber = random.Next(1, 9);
 
                 Console.WriteLine($"{firstNumber} * {secondNumber}");
-                var result = Console.ReadLine(); // asks for user input
+                var result = Console.ReadLine();
+
+                result = Helpers.ValidateResult(result);
 
                 if (int.Parse(result) == firstNumber * secondNumber) // since console.readline returns a String we must parse it to an Integer
                 {
@@ -100,7 +104,9 @@ namespace Math_Game_2023
                 secondNumber = random.Next(1, 9);
 
                 Console.WriteLine($"{firstNumber} - {secondNumber}");
-                var result = Console.ReadLine(); // asks for user input
+                var result = Console.ReadLine();
+
+                result = Helpers.ValidateResult(result);
 
                 if (int.Parse(result) == firstNumber - secondNumber) // since console.readline returns a String we must parse it to an Integer
                 {
@@ -124,7 +130,7 @@ namespace Math_Game_2023
             Helpers.AddToHistory(score, GameType.Subtraction);
         }
 
-        internal void AdditionGame(string message) // void doesn't return anything
+        internal void AdditionGame(string message) 
         {
             Console.Clear();
             Console.WriteLine(message);
@@ -134,8 +140,6 @@ namespace Math_Game_2023
             int firstNumber;
             int secondNumber;
 
-
-
             for (int i = 0; i < 5; i++)
             {
                 firstNumber = random.Next(1, 9);
@@ -143,6 +147,8 @@ namespace Math_Game_2023
 
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
                 var result = Console.ReadLine(); // asks for user input
+
+                result = Helpers.ValidateResult(result); 
 
                 if (int.Parse(result) == firstNumber + secondNumber) // since console.readline returns a String we must parse it to an Integer
                 {

@@ -6,9 +6,12 @@ namespace Math_Game_2023
         GameEngine gameEngine = new();
        internal void ShowMenu(string name, DateTime date)
         {
+            Console.Clear();
             Console.WriteLine("------------------------------------");
             Console.WriteLine($"Hello {name}. It's {date}. This is a math game to test your skills.");
             Console.WriteLine("\n");
+            Console.ReadLine();
+            
 
 
             var isGameOn = true;
@@ -18,7 +21,7 @@ namespace Math_Game_2023
                 Console.Clear();
                 Console.WriteLine("   _____  _  _     __  __       _   _        _____                      \r\n  / ____|| || |_  |  \\/  |     | | | |      / ____|                     \r\n | |   |_  __  _| | \\  / | __ _| |_| |__   | |  __  __ _ _ __ ___   ___ \r\n | |    _| || |_  | |\\/| |/ _` | __| '_ \\  | | |_ |/ _` | '_ ` _ \\ / _ \\\r\n | |___|_  __  _| | |  | | (_| | |_| | | | | |__| | (_| | | | | | |  __/\r\n  \\_____||_||_|   |_|  |_|\\__,_|\\__|_| |_|  \\_____|\\__,_|_| |_| |_|\\___|");
                 Console.WriteLine("-------------------------------------------------------------------------");
-                Console.WriteLine(@$"Please choose the game you'd like to play from the options below
+                Console.WriteLine(@$"Hello {name}! Please choose the game you'd like to play from the options below
 
             |   V - View Previous Games  |
             |   A - Addition Game        |
