@@ -55,7 +55,7 @@ namespace Math_Game_2023
 
 
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 10; i++)
             {
                 firstNumber = random.Next(1, 9);
                 secondNumber = random.Next(1, 9);
@@ -98,7 +98,7 @@ namespace Math_Game_2023
 
 
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 firstNumber = random.Next(1, 9);
                 secondNumber = random.Next(1, 9);
@@ -140,7 +140,7 @@ namespace Math_Game_2023
             int firstNumber;
             int secondNumber;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 firstNumber = random.Next(1, 9);
                 secondNumber = random.Next(1, 9);

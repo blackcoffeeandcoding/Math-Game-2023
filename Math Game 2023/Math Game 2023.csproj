@@ -6,6 +6,11 @@
     <RootNamespace>Math_Game_2023</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>f237e2081d6fe.png.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="f237e2081d6fe.png.ico" />
+  </ItemGroup>
 
 </Project>
